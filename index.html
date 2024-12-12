@@ -1,73 +1,140 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XinZ</title>
+    <title>Profile Page</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #1e1e1e;
+            background-color: #000;
             color: #fff;
+            margin: 0;
+            padding: 0;
             text-align: center;
         }
-        .profile-pic {
+        .profile {
             margin-top: 50px;
-            border-radius: 50%;
+        }
+        .profile img {
             width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
         }
-        .name {
-            margin: 15px 0;
-            font-size: 24px;
-            font-weight: bold;
+        .profile h1 {
+            margin: 0;
         }
-        .quote {
-            font-size: 14px;
-            color: #aaa;
+        .profile p {
+            font-style: italic;
+            color: #bbb;
         }
-        .links {
+        .playlist {
             margin-top: 30px;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
         }
-        .link-btn {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            width: 200px;
-            text-align: center;
-            background-color: #00b894;
+        .playlist img {
+            width: 100px;
+            border-radius: 10px;
+            vertical-align: top;
+        }
+        .playlist .details {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+        }
+        .playlist .details h2 {
+            margin: 0;
+            color: #fff;
+        }
+        .playlist .details p {
+            margin: 5px 0;
+            color: #bbb;
+        }
+        .songs {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .songs table {
+            width: 100%;
+            color: #fff;
+            border-collapse: collapse;
+        }
+        .songs th, .songs td {
+            padding: 10px;
+            border-bottom: 1px solid #444;
+        }
+        .footer-icons {
+            margin-top: 20px;
+        }
+        .footer-icons a {
+            margin: 0 10px;
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .link-btn:hover {
-            background-color: #019f76;
-        }
-        .video {
-            margin: 30px auto;
-            width: 90%;
-            max-width: 600px;
         }
     </style>
 </head>
 <body>
-    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
-    <div class="name">XinZ</div>
-    <div class="quote">"Orang Biasa Yang Ingin Jadi Sepuh"</div>
-
-    <div class="links">
-        <a href="#" class="link-btn">WhatsApp</a>
-        <a href="#" class="link-btn">Bot WhatsApp</a>
-        <a href="#" class="link-btn">Saweria</a>
-        <a href="#" class="link-btn">GitHub</a>
+    <div class="profile">
+        <img src="profile-picture.jpg" alt="Profile Picture">
+        <h1>XinZ</h1>
+        <p>Indonesia, Jakarta</p>
+        <p>"Bussy."</p>
     </div>
-
-    <div class="video">
-        <video controls>
-            <source src="video.mp4" type="video/mp4">
-            Browser Anda tidak mendukung video.
-        </video>
+    <div class="playlist">
+        <img src="playlist-cover.jpg" alt="Playlist Cover">
+        <div class="details">
+            <h2>Playlist No. 1</h2>
+            <p>Save on Spotify</p>
+        </div>
+        <div class="songs">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Artist</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>If I Can Stop One Heart From Breaking</td>
+                        <td>Robin, HOYO-MiX, Chevy</td>
+                        <td>03:22</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Hope Is the Thing With Feathers</td>
+                        <td>Robin, HOYO-MiX, Chevy</td>
+                        <td>03:49</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sway to My Beat in Cosmos</td>
+                        <td>Robin, HOYO-MiX, Chevy</td>
+                        <td>02:45</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>A Little Piece of Heaven</td>
+                        <td>Avenged Sevenfold</td>
+                        <td>08:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="footer-icons">
+        <a href="#">GitHub</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Instagram</a>
+        <a href="#">External Link</a>
     </div>
 </body>
 </html>
