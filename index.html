@@ -1,120 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About kojouta</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #1A1A1A;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Konten utama */
-    .content {
-      padding: 20px;
-    }
-
-    .profile {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .item {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #333333; /* Menggunakan warna #333333 untuk item */
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      display: inline-block;
-      width: 30%;
-      margin-right: 20px;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(-50px);
-      animation: slideDownItem 1s ease forwards;
-    }
-
-    @keyframes slideDownItem {
-      0% {
-        opacity: 0;
-        transform: translateY(-50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .item:nth-child(1) {
-      animation-delay: 0.2s;
-    }
-
-    .item:nth-child(2) {
-      animation-delay: 0.4s;
-    }
-
-    .item:nth-child(3) {
-      animation-delay: 0.6s;
-    }
-
-    .item h2 {
-      color: #4CAF50;
-      margin: 10px 0;
-    }
-
-    .item p {
-      color: #ddd; /* Mengubah warna teks menjadi lebih terang (#ddd) agar kontras dengan latar belakang item */
-    }
-
-    .icon-profile {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin: 20px auto;
-    }
-
-    /* Responsif untuk perangkat kecil */
-    @media (max-width: 768px) {
-      .item {
-        width: 45%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .item {
-        width: 100%;
-        margin-right: 0;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - XinZ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            font-size: 24px;
+            margin: 20px;
+            font-weight: bold;
+        }
+        .profile {
+            margin: 20px 0;
+        }
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .profile h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .profile p {
+            color: #aaa;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .section {
+            margin: 30px auto;
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+        }
+        .section h2 {
+            font-size: 20px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .card {
+            background-color: #111;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+        }
+        .card h3 {
+            margin: 0;
+            color: #00ffcc;
+        }
+        .card p {
+            color: #bbb;
+            margin: 10px 0 0;
+        }
+        footer {
+            margin-top: 30px;
+            color: #777;
+        }
+        .footer-quote {
+            background-color: #222;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .footer-quote img {
+            width: 50px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        .footer-quote span {
+            display: block;
+            color: #fff;
+            font-style: italic;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Konten Utama -->
-  <div class="content">
-    <div id="about" class="profile">
-      <div class="item">
-        <img class="icon-profile" src="https://files.catbox.moe/2iq1lr.jpg" alt="Icon Profil">
-        <h2>Name: Kojouta</h2>
-        <p>Description: Hi! I'm Kojouta, I'm a 3D modeler in Blender!</p>
-      </div>
+    <header>FIREFLY - CHATBOT</header>
+    <div class="profile">
+        <img src="profile-picture.jpg" alt="Profile Picture">
+        <h1>XinZ</h1>
+        <p>Dki Jakarta, Jawa, Indonesia</p>
     </div>
-    <div id="skills" class="profile">
-      <div class="item">
-        <h2>Skill: 3D Model/Animation</h2>
-        <p>Description: VA,3D model artist [blender],Creating 3D /other animations  [blender],Drawing,cosplayer</p>
-      </div>
-      <div class="item">
-        <h2>Language: Indonesia/English</h2>
-        <p>Description: I can speak both English and Indonesian.</p>
-      </div>
+    <div class="section">
+        <h2>About Me</h2>
+        <p>Hi, my name is Arkan, you can also call me Xin or XinZ, here I am as a developer, some of my projects are, xinz-botz, restful APIs, web developer.</p>
     </div>
-  </div>
+    <div class="section">
+        <h2>My Skills</h2>
+        <div class="card">
+            <h3>Language</h3>
+            <p>saya berpengalaman dalam bahasa JavaScript.</p>
+        </div>
+        <div class="card">
+            <h3>Tools</h3>
+            <p>disini saya bisa membuat website kecil dengan HTML dan CSS ketika saya gabut, seperti web store, profile card, maupun portfolio.</p>
+        </div>
+        <div class="card">
+            <h3>Backend</h3>
+            <p>mahir dalam membangun projek sisi server yang kuat dengan Express.js, MongoDB, dan database SQL.</p>
+        </div>
+        <div class="card">
+            <h3>Framework</h3>
+            <p>mencoba Next.js, dan React.js.</p>
+        </div>
+    </div>
+    <div class="footer-quote">
+        <img src="profile-picture.jpg" alt="Profile Picture">
+        <span>"ALONE"</span>
+    </div>
+    <footer>XinZ - 2024.</footer>
 </body>
 </html>
