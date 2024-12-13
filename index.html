@@ -1,128 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - kojouta</title>
+    <title>XinZ</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #000;
-            color: #fff;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
             text-align: center;
         }
-        header {
+        .profile-pic {
+            margin-top: 50px;
+            border-radius: 50%;
+            width: 150px;
+        }
+        .name {
+            margin: 15px 0;
             font-size: 24px;
-            margin: 20px;
             font-weight: bold;
         }
-        .profile {
-            margin: 20px 0;
-        }
-        .profile img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .profile h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-        .profile p {
-            color: #aaa;
+        .quote {
             font-size: 14px;
-            margin: 5px 0;
+            color: #aaa;
         }
-        .section {
-            margin: 30px auto;
-            width: 80%;
-            max-width: 600px;
-            text-align: left;
-        }
-        .section h2 {
-            font-size: 20px;
-            border-bottom: 1px solid #555;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-        .card {
-            background-color: #111;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-        }
-        .card h3 {
-            margin: 0;
-            color: #00ffcc;
-        }
-        .card p {
-            color: #bbb;
-            margin: 10px 0 0;
-        }
-        footer {
+        .links {
             margin-top: 30px;
-            color: #777;
         }
-        .footer-quote {
-            background-color: #222;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-        }
-        .footer-quote img {
-            width: 50px;
-            border-radius: 50%;
-            vertical-align: middle;
-        }
-        .footer-quote span {
+        .link-btn {
             display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            width: 200px;
+            text-align: center;
+            background-color: #00b894;
             color: #fff;
-            font-style: italic;
-            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .link-btn:hover {
+            background-color: #019f76;
+        }
+        .video {
+            margin: 30px auto;
+            width: 90%;
+            max-width: 600px;
         }
     </style>
 </head>
 <body>
-    <header>ABOUT - KOJOUTA</header>
-    <div class="profile">
-        <img src="https://files.catbox.moe/hyrgcu.jpg" alt="Profile Picture">
-        <h1>Kojouta</h1>
-        <p>Dki Jakarta, Jawa, Indonesia</p>
+    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+    <div class="name">XinZ</div>
+    <div class="quote">"Orang Biasa Yang Ingin Jadi Sepuh"</div>
+
+    <div class="links">
+        <a href="#" class="link-btn">WhatsApp</a>
+        <a href="#" class="link-btn">Bot WhatsApp</a>
+        <a href="#" class="link-btn">Saweria</a>
+        <a href="#" class="link-btn">GitHub</a>
     </div>
-    <div class="section">
-        <h2>About Me</h2>
-        <p>Hi, my name is kojouta, you can also call me kio or kojouta, here I am as a 3D modeler.</p>
+
+    <div class="video">
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video.
+        </video>
     </div>
-    <div class="section">
-        <h2>My Skills</h2>
-        <div class="card">
-            <h3>Language</h3>
-            <p>I can understand a little English.</p>
-        </div>
-        <div class="card">
-            <h3>Tools</h3>
-            <p>I can make 3D models/animations.</p>
-        </div>
-        <div class="card">
-            <h3>Backend</h3>
-            <p>good at playing fps games and really likes cats.</p>
-        </div>
-        <div class="card">
-            <h3>Framework</h3>
-            <p>trying something new.</p>
-        </div>
-    </div>
-    <div class="footer-quote">
-        <img src="https://files.catbox.moe/hyrgcu.jpg" alt="Profile Picture">
-        <span>"Busy"</span>
-    </div>
-    <footer>XinZ - 2024.</footer>
 </body>
 </html>
