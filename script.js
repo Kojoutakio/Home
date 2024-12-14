@@ -1,23 +1,26 @@
-// Slider functionality
+// Slider Logic
 const slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
+const body = document.body;
+let currentIndex = 0;
 
+// Function to show the current slide
 function showSlide(index) {
   slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    if (i === index) {
-      slide.classList.add('active');
-    }
+    slide.classList.toggle('active', i === index);
   });
+  body.style.background = slides[index].style.getPropertyValue('--bg-color');
 }
 
-// Auto slide every 5 seconds
-function autoSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
+// Event Listeners for Next and Previous
+document.querySelector('.next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+});
 
-setInterval(autoSlide, 5000);
+document.querySelector('.prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+});
 
-// Initial slide
-showSlide(currentSlide);
+// Initialize the first slide
+showSlide(currentIndex);
