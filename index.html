@@ -9,33 +9,48 @@
 <body>
   <header>
     <div class="logo">Genshin Impact</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Search</a>
+      <a href="#">Message</a>
+      <button class="btn">Log In</button>
+      <button class="btn sign-up">Sign Up</button>
+    </nav>
   </header>
 
   <section class="slider">
-    <div class="slide" style="background-image: url('https://files.catbox.moe/uzb0ky.jpg');">
-      <div class="content">
-        <h1>Raiden Shogun</h1>
-        <p>She is the God of Eternity from Inazuma and the current Electro Archon</p>
-        <button class="read-more">Read More</button>
+    <div class="slides">
+      <!-- Slide 1 -->
+      <div class="slide active" style="--bg-color: #9b5de5;">
+        <div class="content">
+          <h1>Raiden Shogun</h1>
+          <p>She is the God of Eternity from Inazuma and the current Electro Archon.</p>
+          <button class="read-more">Read More</button>
+        </div>
+        <img src="raiden-shogun.png" alt="Raiden Shogun">
       </div>
-      <img src="raiden1.png" alt="Raiden Shogun">
-    </div>
-    <div class="slide" style="background-image: url('background2.jpg');">
-      <div class="content">
-        <h1>Electro Archon</h1>
-        <p>Her power defines the balance between dreams and eternity</p>
-        <button class="read-more">Discover More</button>
+      <!-- Slide 2 -->
+      <div class="slide" style="--bg-color: #6a0dad;">
+        <div class="content">
+          <h1>Kamisato Ayaka</h1>
+          <p>Elegance and power, Ayaka is the princess of the Kamisato Clan in Inazuma.</p>
+          <button class="read-more">Read More</button>
+        </div>
+        <img src="ayaka.png" alt="Kamisato Ayaka">
       </div>
-      <img src="https://files.catbox.moe/c0ybh2.jpg" alt="Raiden Shogun">
+      <!-- Slide 3 -->
+      <div class="slide" style="--bg-color: #4a148c;">
+        <div class="content">
+          <h1>Zhongli</h1>
+          <p>With his mastery of Geo, Zhongli is a symbol of wisdom and strength.</p>
+          <button class="read-more">Read More</button>
+        </div>
+        <img src="zhongli.png" alt="Zhongli">
+      </div>
     </div>
-  </section>
-
-  <section class="artwork">
-    <h2>Artwork</h2>
-    <div class="art-images">
-      <img src="https://files.catbox.moe/37bfox.jpg" alt="Art 1">
-      <img src="https://files.catbox.moe/8je19g.jpg" alt="Art 2">
-      <img src="art3.jpg" alt="Art 3">
+    <div class="controls">
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
     </div>
   </section>
 
