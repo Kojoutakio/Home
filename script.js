@@ -1,12 +1,23 @@
-// Button Hover Effect
-const buttons = document.querySelectorAll('button');
+// Slider functionality
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
 
-buttons.forEach(button => {
-  button.addEventListener('mouseenter', () => {
-    button.style.transform = 'scale(1.1)';
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) {
+      slide.classList.add('active');
+    }
   });
+}
 
-  button.addEventListener('mouseleave', () => {
-    button.style.transform = 'scale(1)';
-  });
-});
+// Auto slide every 5 seconds
+function autoSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+setInterval(autoSlide, 5000);
+
+// Initial slide
+showSlide(currentSlide);
