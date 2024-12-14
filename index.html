@@ -1,183 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Clone</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #36393f;
-            color: #fff;
-            display: flex;
-            height: 100vh;
-        }
-
-        /* Sidebar kiri */
-        .sidebar {
-            width: 80px;
-            background-color: #202225;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px 0;
-        }
-
-        .sidebar .server-icon {
-            width: 50px;
-            height: 50px;
-            margin: 10px 0;
-            border-radius: 50%;
-            background-color: #5865f2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .sidebar .server-icon:hover {
-            background-color: #4752c4;
-        }
-
-        /* Sidebar saluran */
-        .channel-bar {
-            width: 250px;
-            background-color: #2f3136;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .channel-bar h3 {
-            margin: 0;
-            margin-bottom: 10px;
-            color: #b9bbbe;
-            font-size: 14px;
-        }
-
-        .channel-bar .channel {
-            padding: 8px 10px;
-            border-radius: 5px;
-            margin-bottom: 5px;
-            cursor: pointer;
-            color: #b9bbbe;
-        }
-
-        .channel-bar .channel:hover {
-            background-color: #40444b;
-        }
-
-        /* Area utama */
-        .main-content {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .header {
-            background-color: #292b2f;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #202225;
-        }
-
-        .header h2 {
-            margin: 0;
-            font-size: 18px;
-        }
-
-        .chat-area {
-            flex-grow: 1;
-            padding: 10px;
-            overflow-y: auto;
-        }
-
-        .chat-message {
-            margin-bottom: 10px;
-        }
-
-        .chat-message .username {
-            font-weight: bold;
-            color: #00aff4;
-        }
-
-        .message-input {
-            background-color: #40444b;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            border-top: 1px solid #202225;
-        }
-
-        .message-input input {
-            flex-grow: 1;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #2f3136;
-            color: #fff;
-            margin-right: 10px;
-            outline: none;
-        }
-
-        .message-input button {
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            background-color: #5865f2;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .message-input button:hover {
-            background-color: #4752c4;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus | Gamerlix</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Sidebar kiri -->
-    <div class="sidebar">
-        <div class="server-icon">A</div>
-        <div class="server-icon">B</div>
-        <div class="server-icon">+</div>
+  <header>
+    <div class="logo">GAMERLIX</div>
+    <nav>
+      <a href="#news">News</a>
+      <a href="#forum">Forum</a>
+      <a href="#about">About Us</a>
+      <a href="#games">Other Games</a>
+      <button class="btn-cta">Join Beta</button>
+    </nav>
+  </header>
+  
+  <section class="hero">
+    <div class="hero-text">
+      <h1>NE<span class="accent">XUS</span></h1>
+      <p class="lvl">LVL - 20</p>
     </div>
-
-    <!-- Sidebar saluran -->
-    <div class="channel-bar">
-        <h3>Channels</h3>
-        <div class="channel"># general</div>
-        <div class="channel"># random</div>
-        <div class="channel"># coding</div>
+    <img src="your-image.jpg" alt="Cyber character" class="hero-img">
+  </section>
+  
+  <section class="info">
+    <div class="info-card">
+      <h3>BEST GAMES</h3>
+      <p>Immerse in the ultimate rush! The pinnacle of futuristic racing games.</p>
     </div>
-
-    <!-- Area utama -->
-    <div class="main-content">
-        <!-- Header -->
-        <div class="header">
-            <h2># general</h2>
-            <p>User Info</p>
-        </div>
-
-        <!-- Chat area -->
-        <div class="chat-area">
-            <div class="chat-message">
-                <span class="username">User1:</span> Hello, everyone!
-            </div>
-            <div class="chat-message">
-                <span class="username">User2:</span> Hi there!
-            </div>
-        </div>
-
-        <!-- Input pesan -->
-        <div class="message-input">
-            <input type="text" placeholder="Type a message...">
-            <button>Send</button>
-        </div>
+    <div class="info-card">
+      <h3>NEW LOCATION</h3>
+      <p>Explore edge-defying cities and space tracks!</p>
     </div>
+    <div class="info-card">
+      <h3>NEW CHARACTERS</h3>
+      <p>Meet cyborg racers enhanced with unique abilities!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Gamerlix. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
