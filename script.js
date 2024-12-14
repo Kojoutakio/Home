@@ -1,12 +1,21 @@
-// Button Hover Effect
-const buttons = document.querySelectorAll('button');
+// Add scroll animations
+const animatedElements = document.querySelectorAll('.animate-content, .animate-img, .animate-art');
 
-buttons.forEach(button => {
-  button.addEventListener('mouseenter', () => {
-    button.style.transform = 'scale(1.1)';
-  });
+window.addEventListener('scroll', () => {
+  animatedElements.forEach((element) => {
+    const position = element.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
 
-  button.addEventListener('mouseleave', () => {
-    button.style.transform = 'scale(1)';
+    if (position < screenPosition) {
+      element.style.opacity = '1';
+      element.style.transform = 'none';
+    }
   });
+});
+
+// Initial state for animations
+animatedElements.forEach((element) => {
+  element.style.opacity = '0';
+  element.style.transform = 'translateY(20px)';
+  element.style.transition = 'all 0.6s ease-out';
 });
