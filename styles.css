@@ -7,15 +7,21 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: #f5f5f5;
+  background: linear-gradient(to bottom, #9b5de5, #f15bb5); /* Gradasi warna */
+  background-image: url('background.jpg'); /* Gambar background */
+  background-size: cover; /* Gambar menutupi seluruh layar */
+  background-attachment: fixed; /* Efek paralaks */
+  background-blend-mode: overlay; /* Kombinasi gradasi dan gambar */
   color: #333;
+  margin: 0;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8); /* Transparan putih */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -53,17 +59,16 @@ nav .sign-up {
   color: #fff;
 }
 
+/* Hero Section */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 50px 20px;
-  background: linear-gradient(120deg, #9b5de5, #f15bb5);
+  background: rgba(0, 0, 0, 0.5); /* Transparan hitam */
+  border-radius: 10px;
   color: #fff;
-}
-
-.hero-content {
-  max-width: 50%;
+  margin-top: 30px;
 }
 
 .hero-content h1 {
@@ -93,20 +98,20 @@ nav .sign-up {
 .hero-img {
   width: 40%;
   border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-.gallery,
-.recent-search {
-  padding: 40px 20px;
+.hero-img:hover {
+  transform: scale(1.05);
 }
 
-.section-title {
-  margin-bottom: 20px;
+/* Animations */
+.hero-content.animate-content {
+  animation: fadeIn 1s ease-out;
 }
 
-.section-title h2 {
-  font-size: 1.5rem;
-  color: #9b5de5;
+.hero-img.animate-img {
+  animation: slideIn 1.2s ease-out;
 }
 
 .art-images img {
@@ -114,27 +119,49 @@ nav .sign-up {
   margin-right: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
 }
 
-.search-items button {
-  margin: 5px;
-  padding: 10px 15px;
-  border: 1px solid #9b5de5;
-  background: #fff;
-  color: #9b5de5;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s;
+.art-images img:hover {
+  transform: scale(1.1);
 }
 
-.search-items button:hover {
-  background: #9b5de5;
-  color: #fff;
+/* Sections */
+.gallery,
+.recent-search {
+  background: rgba(255, 255, 255, 0.8); /* Transparan putih */
+  border-radius: 10px;
+  padding: 40px 20px;
+  margin: 20px auto;
+  max-width: 1200px;
 }
 
 footer {
-  text-align: center;
-  padding: 10px 0;
-  background: #6a0dad;
+  background: rgba(0, 0, 0, 0.8); /* Transparan hitam */
   color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
