@@ -1,10 +1,12 @@
-// Animation for button hover
-document.querySelectorAll('.info-card').forEach((card) => {
-  card.addEventListener('mouseover', () => {
-    card.style.boxShadow = "0 10px 20px rgba(229, 57, 53, 0.5)";
+// Button Hover Effect
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+  button.addEventListener('mouseenter', () => {
+    button.style.transform = 'scale(1.1)';
   });
 
-  card.addEventListener('mouseout', () => {
-    card.style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.3)";
+  button.addEventListener('mouseleave', () => {
+    button.style.transform = 'scale(1)';
   });
 });
