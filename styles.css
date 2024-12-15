@@ -1,4 +1,4 @@
-/* Reset dan Aturan Dasar */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +7,8 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom, #1a1a1a, #3e3e3e);
-  color: white;
-  overflow-x: hidden;
+  background: linear-gradient(to bottom, #FF6347, #FFDAB9);
+  color: #333;
 }
 
 .container {
@@ -19,136 +18,151 @@ body {
 }
 
 /* Header */
-.header {
-  padding: 20px 0;
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 0;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.menu {
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FF4500;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.menu li a {
+.nav-links li a {
   text-decoration: none;
-  color: #fff;
   font-size: 16px;
-  transition: color 0.3s;
+  color: #333;
 }
 
-.menu li a:hover {
-  color: #db00ff; /* Warna Ungu */
-}
-
-.date-time {
-  font-size: 14px;
-  text-align: right;
+.nav-links li a.active {
+  color: #FF4500;
+  font-weight: bold;
 }
 
 /* Hero Section */
 .hero {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
-  animation: fadeIn 1.5s ease-out;
+  justify-content: space-between;
+  margin: 50px 0;
 }
 
-.left-content {
+.hero .content {
   max-width: 50%;
 }
 
-.character-name {
+.hero h1 {
   font-size: 48px;
   font-weight: bold;
+  color: #FF4500;
   text-transform: uppercase;
 }
 
-.highlight {
-  color: #db00ff;
+.hero .highlight {
+  color: #FF6347;
   font-style: italic;
 }
 
-.description {
+.hero p {
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
-.design-by {
-  margin-top: 10px;
-  font-style: italic;
-  color: #a206bc;
+.hero .cta-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #FF4500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-.weather {
+.hero .cta-btn:hover {
+  background-color: #FF6347;
+}
+
+.character-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Info Section */
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.info-box {
+  max-width: 50%;
+}
+
+.info-box h3 {
+  font-size: 24px;
+  color: #FF4500;
+}
+
+.info-box .palette {
+  display: flex;
+  gap: 10px;
   margin-top: 20px;
+}
+
+.info-box .palette span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.profile {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-text h4 {
+  margin-bottom: 10px;
   font-size: 18px;
 }
 
-.weather .temp {
-  font-weight: bold;
-}
-
-.right-content {
-  position: relative;
-}
-
-.character-img {
-  width: 400px;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  animation: slideIn 1.5s ease-out;
-}
-
-.details {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #494848;
+.follow-btn {
+  padding: 5px 10px;
+  background-color: #FF4500;
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.rank {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   font-size: 14px;
-  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.role {
-  font-size: 12px;
-  color: #f4f6fc;
-}
-
-/* Animasi */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.follow-btn:hover {
+  background-color: #FF6347;
 }
