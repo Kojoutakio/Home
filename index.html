@@ -7,26 +7,45 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Container utama -->
+  <!-- Container Utama -->
   <div class="container">
-    <!-- Gambar Background -->
+    <!-- Background Blur -->
     <div class="background">
-      <img src="https://via.placeholder.com/1280x720" alt="Yae Miko Background" class="bg-image">
+      <img src="images/background.jpg" alt="Background" class="bg-image">
+      <div class="overlay"></div>
     </div>
 
-    <!-- Konten Depan -->
+    <!-- Konten Utama -->
     <div class="content">
-      <!-- Gambar Yae Miko -->
-      <div class="character">
-        <img src="https://via.placeholder.com/500" alt="Yae Miko" class="character-img">
-      </div>
-      <!-- Teks Title -->
-      <div class="title">
-        <h1>八重神子</h1>
-        <p>仙狐庵</p>
-      </div>
-      <!-- Garis dan Ornamen -->
-      <div class="ornament"></div>
+      <!-- Header -->
+      <header>
+        <div class="logo">Genshin Impact</div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Character</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Bagian Tengah -->
+      <main>
+        <div class="character-card">
+          <img src="images/yae-miko.png" alt="Yae Miko" class="character-image">
+          <div class="character-info">
+            <h1>Yae Miko</h1>
+            <p>"The elegant and mysterious shrine maiden of Narukami Shrine."</p>
+            <button id="exploreBtn">Explore</button>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2024 Genshin Impact Fan Page | Design by You</p>
+      </footer>
     </div>
   </div>
 
