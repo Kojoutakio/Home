@@ -1,21 +1,23 @@
-// Simple scroll animation for smooth effects
-const scrollItems = document.querySelectorAll('.character-image img, .character-description');
+// Lazy animation on scroll
+const animatedElements = document.querySelectorAll(
+  '.animate-title, .animate-subtitle, .animate-description, .animate-link, .animate-signature, .animate-buttons, .animate-img'
+);
 
 window.addEventListener('scroll', () => {
-  scrollItems.forEach((item) => {
-    const rect = item.getBoundingClientRect().top;
-    const viewHeight = window.innerHeight / 1.2;
+  animatedElements.forEach((el) => {
+    const position = el.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
 
-    if (rect < viewHeight) {
-      item.style.opacity = '1';
-      item.style.transform = 'translateY(0)';
+    if (position < windowHeight - 50) {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
     }
   });
 });
 
-// Set initial opacity and transform for animation
-scrollItems.forEach((item) => {
-  item.style.opacity = '0';
-  item.style.transform = 'translateY(20px)';
-  item.style.transition = 'all 0.6s ease-out';
+// Initial state
+animatedElements.forEach((el) => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'all 0.5s ease';
 });
