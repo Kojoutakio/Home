@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Header Section -->
   <header>
-    <nav>
-      <ul class="nav-links">
+    <nav class="navbar">
+      <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Menu</a></li>
         <li><a href="#" class="active">Character</a></li>
@@ -23,31 +23,31 @@
 
   <!-- Main Section -->
   <main>
-    <section class="character-section">
-      <!-- Character Image -->
-      <div class="character-image">
-        <img src="makima.png" alt="Makima">
-      </div>
-      <!-- Character Description -->
-      <div class="character-description">
-        <h1>MAKIMA</h1>
-        <p class="subtitle">She is the leader of the Public Safety Devil Hunter organization, or is she?</p>
-        <p class="details">
-          She is the leader of the PSDH organization who takes Denji under her wing, giving him a happy life.
-          Initially acting as a helpful ally, she is later revealed to be a powerful...
+    <section class="character">
+      <div class="content">
+        <h1 class="title animate-title">MAKIMA</h1>
+        <p class="subtitle animate-subtitle">
+          She is the leader of the Public Safety Devil Hunter organization, or is she?
         </p>
-        <a href="https://instagram.com/makima_official" target="_blank" class="insta-link">Instagram Profile</a>
-        <p class="signature">Makima</p>
-        <div class="buttons">
-          <button class="btn-watch">Watch Anime</button>
-          <button class="btn-read">Read Manga</button>
+        <p class="description animate-description">
+          She is the leader of the PSDH organization who takes Denji under her wing, giving him a happy life. Initially acting as a helpful ally, she is later revealed to be a powerful...
+        </p>
+        <a href="https://instagram.com/makima_official" class="link animate-link">https://instagram.com/makima_official</a>
+        <p class="signature animate-signature">Makima</p>
+        <div class="buttons animate-buttons">
+          <button class="btn">Watch Anime</button>
+          <button class="btn secondary">Read Manga</button>
         </div>
+      </div>
+      <div class="image-container">
+        <img src="makima.png" alt="Makima" class="character-img animate-img">
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Chainsaw Man. All rights reserved.</p>
+    <p>© 2024 Chainsaw Man. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
