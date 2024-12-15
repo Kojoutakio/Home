@@ -1,165 +1,124 @@
-/* Reset */
+/* Global Settings */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-  background-color: #111;
-  color: #fff;
-  overflow: hidden;
-}
-
-/* Container */
-.container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-/* Background */
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.bg-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(8px) brightness(60%);
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+    background-color: #f9f7ff;
+    color: #333;
 }
 
 /* Header */
-header {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #9d7dc8;
+    color: #fff;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #f08;
-  text-shadow: 0 0 8px #f08;
+.nav-bar a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+.btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #6f4ca2;
+    color: white;
+    border-radius: 5px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: color 0.3s ease;
+.sign-up {
+    background-color: #a162d8;
 }
 
-nav a:hover {
-  color: #f08;
+/* Banner Section */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #e9d8ff;
 }
 
-/* Main Content */
-main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
+.banner-content h1 {
+    font-size: 2.5em;
+    color: #6f4ca2;
 }
 
-.character-card {
-  display: flex;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  gap: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+.banner-content p {
+    margin: 10px 0;
+    color: #555;
 }
 
-.character-image {
-  width: 300px;
-  animation: fadeIn 1.5s ease-in-out;
+.read-more {
+    color: #6f4ca2;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.character-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+.banner-image img {
+    width: 300px;
+    border-radius: 10px;
 }
 
-.character-info h1 {
-  font-size: 2.5rem;
-  color: #f08;
-  text-shadow: 0 0 8px #f08;
+/* Artwork Section */
+.artwork {
+    text-align: center;
+    padding: 20px;
 }
 
-.character-info p {
-  font-size: 1.2rem;
-  color: #ddd;
+.artwork-images img {
+    width: 150px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
-button {
-  background-color: #f08;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+.view-more {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: #6f4ca2;
+    font-weight: bold;
 }
 
-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px #f08;
+/* Recent Search */
+.recent-search {
+    padding: 20px;
+    background-color: #f0e6ff;
 }
 
-/* Footer */
-footer {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.9rem;
-  color: #aaa;
+.search-list button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background-color: #9d7dc8;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Animasi */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Footer Icons */
+footer .icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #e9d8ff;
+}
+
+.icon-item {
+    text-align: center;
+}
+
+.icon-item img {
+    width: 50px;
 }
