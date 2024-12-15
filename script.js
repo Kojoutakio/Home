@@ -1,3 +1,10 @@
-document.getElementById("exploreBtn").addEventListener("click", function() {
-  alert("Welcome to Yae Miko's Shrine! Explore her story and secrets.");
+// Placeholder for interactivity
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll('.search-list button');
+    
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            alert(`You clicked: ${button.innerText}`);
+        });
+    });
 });
