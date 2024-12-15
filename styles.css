@@ -1,25 +1,26 @@
-/* Reset */
+/* Reset dan Aturan Dasar */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   font-family: 'Arial', sans-serif;
-  color: #ffffff;
-  background: #1a1a1a;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: linear-gradient(to bottom, #1a1a1a, #3e3e3e);
+  color: white;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Header */
-.main-header {
-  width: 100%;
-  background-color: #1a1a1a;
-  padding: 10px 20px;
+.header {
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,97 +34,121 @@ body {
 
 .menu li a {
   text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
-.profile-details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+.menu li a:hover {
+  color: #db00ff; /* Warna Ungu */
 }
 
 .date-time {
-  font-size: 12px;
+  font-size: 14px;
+  text-align: right;
 }
 
-.tag {
-  font-size: 16px;
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.left-content {
+  max-width: 50%;
+}
+
+.character-name {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.highlight {
   color: #db00ff;
-}
-
-/* Profile Section */
-.profile {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.avatar {
-  width: 300px;
-  height: auto;
-  border-radius: 50%;
-  border: 5px solid #a206bc;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.name {
-  font-size: 50px;
-  color: #f4f0fc;
-  margin-top: 20px;
-}
-
-.subtitle {
-  font-size: 24px;
-  color: #db00ff;
-  margin: 10px 0;
+  font-style: italic;
 }
 
 .description {
+  margin-top: 20px;
   font-size: 16px;
-  color: #949484;
-  max-width: 600px;
-  margin: 0 auto;
+  line-height: 1.5;
 }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  text-align: center;
+.design-by {
+  margin-top: 10px;
+  font-style: italic;
+  color: #a206bc;
 }
 
 .weather {
-  background: #3e3533;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.weather .temp {
+  font-weight: bold;
+}
+
+.right-content {
+  position: relative;
+}
+
+.character-img {
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  animation: slideIn 1.5s ease-out;
+}
+
+.details {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #494848;
+  color: #fff;
   padding: 10px 20px;
   border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.weather .icon {
-  font-size: 30px;
-}
-
-.weather .temperature {
-  font-size: 16px;
-}
-
-.ranking {
-  background: #3e3533;
-  padding: 15px;
-  border-radius: 10px;
+  text-align: center;
 }
 
 .rank {
   font-size: 14px;
-  color: #ffffff;
-  margin-top: 10px;
+  font-weight: bold;
 }
 
-/* Footer */
-footer {
-  margin-top: 50px;
+.role {
   font-size: 12px;
-  color: #949484;
+  color: #f4f6fc;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
