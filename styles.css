@@ -50,21 +50,25 @@ body {
     background-color: #e9d8ff;
 }
 
-.banner-content h1, 
-.banner-content p,
-.read-more,
-.banner-image img {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease;
+.banner-content h1 {
+    font-size: 2.5em;
+    color: #6f4ca2;
 }
 
-.banner-content h1.animate-visible,
-.banner-content p.animate-visible,
-.read-more.animate-visible,
-.banner-image img.animate-visible {
-    opacity: 1;
-    transform: translateY(0);
+.banner-content p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.read-more {
+    color: #6f4ca2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner-image img {
+    width: 300px;
+    border-radius: 10px;
 }
 
 /* Artwork Section */
@@ -74,14 +78,17 @@ body {
 }
 
 .artwork-images img {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease;
+    width: 150px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
-.artwork-images img.animate-visible {
-    opacity: 1;
-    transform: translateY(0);
+.view-more {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: #6f4ca2;
+    font-weight: bold;
 }
 
 /* Recent Search */
@@ -110,12 +117,8 @@ footer .icons {
 
 .icon-item {
     text-align: center;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease;
 }
 
-.icon-item.animate-visible {
-    opacity: 1;
-    transform: translateY(0);
+.icon-item img {
+    width: 50px;
 }
